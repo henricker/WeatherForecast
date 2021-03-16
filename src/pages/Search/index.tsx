@@ -1,10 +1,12 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-export default function Search() {
+const Search: React.FC = () => {
   return (
     <View>
       <Text>Search page</Text>
     </View>
   );
 }
+
+export default Search;

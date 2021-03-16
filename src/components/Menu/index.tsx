@@ -3,7 +3,7 @@ import { TouchableOpacity, StyleSheet } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-export default function Menu() {
+const Menu: React.FC = () => {
 
   const navigation = useNavigation<any>();
 
@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
       width: 1,
       height: 3,
     }
-
   }
 })
+
+export default Menu;

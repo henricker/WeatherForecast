@@ -1,10 +1,14 @@
 import React from 'react';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 import Home from './pages/Home';
 import Search from './pages/Search';
 
-const Drawer = createDrawerNavigator();
+type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList>
+
+
+const Drawer = createDrawerNavigator<HomeScreenNavigationProp>();
 
 export default function Routes() {
   return (
@@ -20,7 +24,7 @@ export default function Routes() {
         name = 'Search'
         component = {Search}
         options = {{
-          title: 'procurar'
+          title: 'Procurar'
         }}
       />
     </Drawer.Navigator>
